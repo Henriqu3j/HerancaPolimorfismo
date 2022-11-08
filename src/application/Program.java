@@ -40,6 +40,23 @@ public class Program {
 			}
 			}
 			
+		System.out.println();
+		
+		// Para cada contribuinte(TAXPAYER), pode se obter uma diferente implementação//
+		System.out.println("TAXPAYER");
+		
+		for (Taxpayer tp : list) {
+			System.out.println(tp.getName() + ": $ " + String.format("%.2f", tp.tax()));
+		}
+		
+		System.out.println();
+		
+		double sum = 0.0;
+		for (Taxpayer tp : list) {
+		sum += tp.tax();
+		}
+		System.out.println("Total TAXES: $ " + String.format("%.2f", sum));
+		
 		sc.close();
 		
 		

@@ -29,7 +29,7 @@ public class Individual extends Taxpayer {
 			basicTax = getAnualIncome() * 0.25;
 		}
 		
-		basicTax = basicTax - (getHealthExpenditures() * 0.5);
+		basicTax = basicTax - getHealthExpenditures() * 0.5;
 		
 		if (basicTax < 0.0) {
 			basicTax = 0.0;
